@@ -1,5 +1,5 @@
 provider "vault" {
-  address = var.vault_addr
+  address = var.vault_url
   token = var.vault_token
 }
 
