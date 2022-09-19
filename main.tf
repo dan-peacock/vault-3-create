@@ -35,7 +35,7 @@ resource "aws_dynamodb_table_item" "customers_items" {
   "customer_id": {"S": "1"},
   "FirstName": {"S": "Dan"},
   "Surname": {"S": "Peacock"},
-  "CCN": {"S": "${data.vault_transform_encode.test.encoded_value}"}
+  "CCN": {"S": "1111-2222-3333-4444"}
 }
 ITEM
 }
