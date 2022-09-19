@@ -4,7 +4,7 @@ provider "vault" {
 }
 
 data "vault_aws_access_credentials" "creds" {
-  backend = "aws-dynamic-creds/creds/"
+  backend = "aws-dynamic-creds"
   role    = "aws-role"
 }
 
