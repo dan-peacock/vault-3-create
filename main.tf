@@ -16,8 +16,8 @@ provider "aws" {
 
 resource "aws_dynamodb_table" "customers_db" {
   name           = "customers"
-  read_capacity  = 10
-  write_capacity = 10
+  read_capacity  = 5
+  write_capacity = 5
   hash_key       = "customer_id"
 
   attribute {
@@ -38,4 +38,8 @@ resource "aws_dynamodb_table_item" "customers_items" {
   "CCN": {"S": "1111-2222-3333-4444"}
 }
 ITEM
+}
+
+output "iam_test" {
+  value = data.vault_aws_access_credentials.creds.access_key
 }
