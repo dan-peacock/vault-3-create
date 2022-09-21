@@ -1,3 +1,3 @@
-variable "vault_url" {}
+variable "vault_password" {}
 
-variable "vault_token" {}
+variable "vault_username" {}
