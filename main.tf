@@ -1,6 +1,11 @@
 provider "vault" {
-  address = var.vault_url
-  token = var.vault_token
+  auth_login {
+    path = "auth/userpass/login/${var.vault_username}"
+
+    parameters = {
+      password = var.vault_password
+    }
+  }
 }
 
 data "vault_aws_access_credentials" "creds" {
