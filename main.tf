@@ -2,7 +2,7 @@ provider "vault" {
   address = var.vault_url
   auth_login {
     path = "auth/userpass/login/${var.vault_username}"
-
+    namespace = "admin"
     parameters = {
       password = var.vault_password
     }
